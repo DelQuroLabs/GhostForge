@@ -1,0 +1,41 @@
+{
+  "name": "ghostforge",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ghostforge — faceless full-book ghostwriting studio. Forge complete epic books, not paragraphs.",
+  "scripts": {
+    "dev": "NODE_OPTIONS=--max-old-space-size=1536 tsx server/index.ts",
+    "build": "vite build && tsc -p tsconfig.server.json",
+    "start": "NODE_ENV=production NODE_OPTIONS=--max-old-space-size=1536 node dist-server/index.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.server.json"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.2",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.445.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "ws": "^8.21.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/express": "^4.17.21",
+    "@types/jszip": "^3.4.1",
+    "@types/node": "^20.16.10",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.8"
+  }
+}
